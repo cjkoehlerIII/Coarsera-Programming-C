@@ -1,0 +1,185 @@
+0x1   0x1
+0xx1  0xx1
+0xxx1 0xx1
+0xxx1 0xxx1
+aaaaa bbbbb
+aaaab abbbb
+aaabb aaabb
+aabbb bbbaa
+abbbb baaaa
+bbbbb aaaaa
+aaabb bbaaa
+aabbb aabbb
+abccc cccab
+abbcc ccbba
+acccc bcccc
+abccd dccba
+abcdd ddcba
+abcde edcba
+edcba abcde
+edcba ebcda
+abccd abccd
+1abcd !abc!
+abbba baaac
+aabaa bbabb
+abbaa aabba
+aaaaa a
+aaaaa aa
+bbbbb 11111
+ababa babab
+ababa ababa
+aaaaa aaaaa
+babab babab
+babab ababa
+aaaaa a
+aaaaa aa
+aaaaa aaa
+aaaaa aaaa
+a     aaaaa
+aa    aaaaa
+aaa   aaaaa
+aaaa  aaaaa
+aaaaa b
+aaaaa bb
+aaaaa bbb
+aaaaa bbbb
+acccc bbbbb
+aaccc bbbbb
+aaacc bcccc
+bbbbb a
+bbbbb aa
+bbbbb aaa
+bbbbb aaaa
+bbbaa aa
+bbbaa aaa
+bbbaa aaaa
+bbbaa aaaaa
+bbaaa aaaaa
+baaaa baaaa
+cbaaa cbaaa
+
+a     a
+aa    aa
+aaa   aaa
+aaaa  aaaa
+a     b
+a     bb
+a     bbb
+a     bbbb
+a     bbbbb
+aa    bb
+aa    bbb
+aa    bbbb
+aaa   b
+aaa   bb
+aaa   bbb
+aaa   bbbb
+b     aa
+b     aaa
+b     aaaa
+bb    a
+bbb   aa
+bbbb  aaa
+bbbbb aaaa
+12345 12345
+00000 00000
+12345 54321
+      aaaaaa
+1     1
+11    11
+1     11
+1     111
+1     1111
+11    1
+111   1
+1111  1
+11111 1
+111111!!!!!!
+!!!!!!111111
+1111111111
+1111111aaaaa
+11111
+1
+11
+111
+11111
+111111111111
+1212121212
+AAAAA BBBBB
+
+AAAAA AAAAA
+AAAAA AAAAA
+BBBBB AAAAA
+BBBBBBBBBBBBBBBB
+0000000000000000
+////////////////
+>>>>>>>>>>>>>>>>
+''''''''''''''''
+3333333333333333
+4444444444444444
+5555555555555555
+111111111115555555555
+/n /n
+!@#$$ !@#$#
+)((*& )(*&^
+$%^&* $%^&*
+ 111111111
+$1 $2
+%1 %1
+defgh defgh
+ddefg defgh
+defgh ddfgh
+defhh defgh
+a a a a a a
+a a a a a a
+b b b b b b
+a  a  a  a
+a   a a   a
+b   b a   a
+b    ba   b
+bb aa bb aa
+bb bb bb aa
+aa aa aa aa
+ab ab ab ab
+abc a abc a
+abc b abc b
+abc c abc c
+abc d d abc
+b aba b aba
+bb
+      bb
+aa    bb
+a   a b   b
+b   a a   b
+ba ba ab ab
+ac    aca
+acb   acb
+acbb  acb
+acb   acbb
+                            \n
+1111111111111111111111111111111111\n
+printf printf
+()     ()
+                                    aaaaa
+aaaaa
+  a     a
+  b	a
+  ab  ab
+  ab   bb
+  bb   ab
+aaaaa                                   \n
+a
+                                        a\n
+!=     !=
+===== ====
+=     =====
+==    =====
+===   ===
+====  =====
+abcd  efghi
+abcde fghi
+      xxxxxxxxxxxx
+a     bbbbbbbbbbb
+aaaaa a
+bbbbb bbbbbb
+bbbbbb b
