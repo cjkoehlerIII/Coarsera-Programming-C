@@ -141,24 +141,24 @@ card_t card_from_letters(char value_let, char suit_let) {
 
 
 card_t card_from_num(unsigned c) {
-  card_t temp={0,1};
+  card_t temp={0,0};
 
-  if(c<=13&&c>=0){
+  if(c<=12&&c>=0){
     temp.suit=SPADES;
     temp.value=c%13+2;
     return temp;};
 
-  if(c<=26&&c>13){
+  if(c<=25&&c>12){
     temp.suit=HEARTS;
     temp.value=c%13+2;
     return temp;};
 
-  if(c<=39&&c>26){
+  if(c<=38&&c>25){
     temp.suit=DIAMONDS;
     temp.value=c%13+2;
     return temp;};
 
-  if(c<=52&&c>39){
+  if(c<=51&&c>38){
     temp.suit=CLUBS;
     temp.value=c%13+2;
     return temp;};
