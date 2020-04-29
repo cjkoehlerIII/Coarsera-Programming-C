@@ -48,7 +48,6 @@ are some #defines for constants for
 the values of Ace, King, Queen, and Jack.
 Accordingly, a card's value should
 be between 2 and 14 (inclusive).
-
 There is also an enum for the hand
 ranking (what kind of poker hand you get).
 We won't be doing anything with these
@@ -63,6 +62,7 @@ Now go into cards.c, and write each of these
 functions.  Here are the specifics: 
 
 - void assert_card_valid(card_t c);
+
   This function should use assert() to check
   that the card passed in has valid values.
   In particular, its value should be between
