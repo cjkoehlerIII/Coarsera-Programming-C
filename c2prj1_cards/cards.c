@@ -7,7 +7,8 @@ void assert_card_valid(card_t c){
 assert(c.value>=2);
 assert(c.value<=VALUE_ACE);
 assert(c.suit>=SPADES);
-assert(c.suit<=CLUBS); 
+assert(c.suit<=CLUBS);
+return;
   }
 
 const char * ranking_to_string(hand_ranking_t r) {
