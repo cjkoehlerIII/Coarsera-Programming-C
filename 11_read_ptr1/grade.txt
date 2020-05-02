@@ -1,6 +1,6 @@
-Grading at Sat May  2 00:46:48 UTC 2020
+Grading at Sat May  2 00:50:32 UTC 2020
 Attempting to compile test.c
-gcc -o test -ggdb3 -Wall -Werror -pedantic -std=gnu99 test.c
+gcc -o test test.c
 compiled
 Line_1_did_not_match
 Line_3_did_not_match
