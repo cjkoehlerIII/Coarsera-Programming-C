@@ -1,16 +1,10 @@
-Grading at Sat May  2 00:41:56 UTC 2020
+Grading at Sat May  2 00:43:17 UTC 2020
 Attempting to compile test.c
 gcc -o test -ggdb3 -Wall -Werror -pedantic -std=gnu99 test.c
 compiled
-I expected to find a file called 'answer.txt' but it did not exist
-(or was not a regular file)
-Here are the files that I can find:
-answers.txt
-Makefile
-README
-test
-test.c
-test.exe
+Line_1_did_not_match
+Line_3_did_not_match
+Your file did not match the expected ouput
 Your output did not match what we expected.
 
 Overall Grade: FAILED
