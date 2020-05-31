@@ -2,8 +2,21 @@
 #include <stdlib.h>
 
 int * arrayMax(int * array, int n) {
-  return NULL;
+  int *max;
+  int c;
+  if(n<1){
+      return NULL;    
+    } else{
+     c=array[0];
+       for(int i=1; i<n; i++){
+	   if(array[i]>c){
+	    c=array[i];
+	   }
+       max=&c;
+       }
+  } return max;
 }
+       
 
 void doTest(int * array, int n) {
   printf("arrayMax(");
@@ -34,6 +47,7 @@ int main(void) {
   int array1[] = { 77, 33, 19, 99, 42, 6, 27, 4};
   int array2[] = { -3, -42, -99, -1000, -999, -88, -77};
   int array3[] = { 425, 59, -3, 77, 0, 36};
+
 
   doTest (array1, 8);
   doTest (array2, 7);
