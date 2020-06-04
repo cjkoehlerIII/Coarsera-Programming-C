@@ -14,19 +14,18 @@ size_t maxSeq(size_t *array, size_t n){
   size_t *p=&array[0];
   
      
-  if(*(p+i)=='\0'){
+  if(*(p)=='\0'){
     super_seq=0;
-     return super_seq=0;};
+     return super_seq;};
 
-  if(n==1 || n==0){
+  if(n==1 || (*(p+0)==1 || *(p+0)==0)){
     super_seq=1;
-     return super_seq=1;};
+    return super_seq;};
   
   for(j=0;j<n;j++){
     current_seq=1;
     max_seq=1;
-    super_seq=1;
-     
+         
     for(i=j;i<n;i++){
 
       if(*(p+i)<0){
