@@ -96,13 +96,24 @@ char value_letter(card_t c) {
 }
 
 char suit_letter(card_t c) {
-  switch(c.suit) {
-  case SPADES : return 's'; break;
-  case HEARTS : return 'h'; break;
-  case DIAMONDS : return 'd'; break;
-  case CLUBS : return 'c'; break;
-  default : return '?'; break;
-  }
+  if(c.suit==SPADES){
+    return 's';};
+  if(c.suit==HEARTS){
+    return 'h';};
+  if(c.suit==DIAMONDS){
+    return 'd';};
+  if(c.suit==CLUBS){
+    return 'c';}
+  else{
+    return '?';};
+
+  // switch(c.suit) {
+  //case SPADES : return 's'; break;
+  //case HEARTS : return 'h'; break;
+  //case DIAMONDS : return 'd'; break;
+  //case CLUBS : return 'c'; break;
+  //default : return '?'; break;
+  //}
 }
 
 void print_card(card_t c) {
