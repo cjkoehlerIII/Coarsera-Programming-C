@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+size_t maxSeq(int *array, size_t n);
+
 size_t maxSeq(int *array, size_t n){
 
   size_t current_seq=1;
@@ -19,11 +21,7 @@ size_t maxSeq(int *array, size_t n){
   if(n==1 || n==0){
     super_seq=1;
      return super_seq=1;};
-
-  if(array[0]==0 && n==1){
-    super_seq=1;
-    return super_seq=0;};
-
+  
   for(j=0;j<n;j++){
     current_seq=1;
     max_seq=0;
