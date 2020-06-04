@@ -1,4 +1,4 @@
-Grading at Thu Jun  4 17:10:11 UTC 2020
+Grading at Thu Jun  4 17:14:31 UTC 2020
 Attempting to compile maxSeq.c 
 Linking your object file with our test main
 #################################################
