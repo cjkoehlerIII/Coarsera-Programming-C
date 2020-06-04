@@ -16,7 +16,7 @@ size_t maxSeq(int *array, size_t n){
     super_seq=0;
      return super_seq=0;};
 
-  if(n==1 || n==0){
+  if(array[0]==1|| n==1){
     super_seq=1;
      return super_seq=1;};
 
