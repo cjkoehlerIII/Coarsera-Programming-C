@@ -24,7 +24,7 @@ size_t maxSeq(int *array, size_t n){
   
   for(j=0;j<n;j++){
     current_seq=1;
-    max_seq=0;
+    max_seq=1;
      
     for(i=j;i<n;i++){
 
