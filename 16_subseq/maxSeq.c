@@ -53,6 +53,7 @@ size_t maxSeq(int *array, size_t n){
       super_seq=max_seq;}
   };
 
+  
    return super_seq;
 };
   

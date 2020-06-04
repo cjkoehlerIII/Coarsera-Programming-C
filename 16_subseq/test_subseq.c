@@ -18,15 +18,15 @@ int array9[]={4294967295};
 
  
 if(maxSeq(array1,3)!=3){
-  printf("Failed on 1,2,3\n");
+
   exit(EXIT_FAILURE);}
 
 if(maxSeq(array2,1)!=1){
-  printf("Failed on {1}\n");
+
   exit(EXIT_FAILURE);}
 
 if(maxSeq(array3,1)!=0){
-  printf("Failed on {0}\n");
+
   exit(EXIT_FAILURE);}
  
 /*if(maxSeq(array4,0)!=1){
@@ -35,7 +35,7 @@ if(maxSeq(array3,1)!=0){
 */
  
 if(maxSeq(array5,3)!=0){
-  printf("Failed on negative seq\n");
+
   exit(EXIT_FAILURE);}
 
 /*if(maxSeq(array6,3)!=3){
@@ -44,15 +44,15 @@ if(maxSeq(array5,3)!=0){
 */
  
 if(maxSeq(array7,5)!=3){
-   printf("array7 failed\n");
+
    exit(EXIT_FAILURE);}
  
 if(maxSeq(array8,6)!=4){
-   printf("Failed on 1,2,2,3,4,5 b\n");
+
    exit(EXIT_FAILURE);}
 
 if(maxSeq(array9,1)!=1){
-   printf("Failed on big");
+
    exit(EXIT_FAILURE);}
 
 return(EXIT_SUCCESS);
