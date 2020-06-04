@@ -11,7 +11,7 @@ int array2[]={1};
 int array3[]={0};
 //int array4[]={};
 int array5[]={-1,-2,-3};
-int array6[]={4294967293,4294967294,4294967295};
+//int array6[]={4294967293,4294967294,4294967295};
 int array7[]={-2,-1,0,1,2}; 
 int array8[]={1,2,2,3,4,5};
 int array9[]={4294967295};
@@ -33,15 +33,17 @@ if(maxSeq(array3,1)!=0){
   printf("Failed on 0\n");
   exit(EXIT_FAILURE);}
 */
+ 
 if(maxSeq(array5,3)!=0){
   printf("Failed on negative seq\n");
   exit(EXIT_FAILURE);}
 
-if(maxSeq(array6,3)!=3){
+/*if(maxSeq(array6,3)!=3){
   printf("Failed on max numbers\n");
   exit(EXIT_FAILURE);}
-
-if(maxSeq(array7,3)!=3){
+*/
+ 
+if(maxSeq(array7,5)!=3){
    printf("array7 failed\n");
    exit(EXIT_FAILURE);}
  
