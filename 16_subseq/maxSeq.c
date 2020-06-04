@@ -48,13 +48,14 @@ size_t maxSeq(int *array, size_t n){
       if(current_seq>max_seq){
 	max_seq=current_seq;};
   
-    };
+    }
+    
     if(max_seq>super_seq){
       super_seq=max_seq;}
-  };
+  }
 
    return super_seq;
-};
+}
   
 
     
