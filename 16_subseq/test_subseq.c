@@ -3,7 +3,7 @@
 
 int main (){
 
-size_t maxSeq(int * array, size_t n);
+size_t maxSeq(size_t * array, size_t n);
 
 
 int array1[]={1,2,3};
@@ -22,11 +22,11 @@ if(maxSeq(array1,3)!=3){
   exit(EXIT_FAILURE);}
 
 if(maxSeq(array2,1)!=1){
-
+  printf("failed on array 2 seq 1");
   exit(EXIT_FAILURE);}
 
-if(maxSeq(array3,1)!=0){
-
+if(maxSeq(array3,1)!=1){
+  printf("failed on array 3 seq 1");
   exit(EXIT_FAILURE);}
  
 /*if(maxSeq(array4,0)!=1){
