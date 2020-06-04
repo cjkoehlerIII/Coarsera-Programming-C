@@ -3,7 +3,7 @@
 
 int main (){
 
-size_t maxSeq(size_t * array, size_t n);
+size_t maxSeq(int * array, size_t n);
 
 
 int array1[]={1,2,3};
