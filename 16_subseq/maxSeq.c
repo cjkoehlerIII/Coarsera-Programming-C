@@ -1,17 +1,17 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-size_t maxSeq(int *array, size_t n);
+size_t maxSeq(size_t *array, size_t n);
 
-size_t maxSeq(int *array, size_t n){
+size_t maxSeq(size_t *array, size_t n){
 
   size_t current_seq=1;
   size_t max_seq=0;
   size_t super_seq=0;
-  int i=0;
-  int j=0;
+  size_t i=0;
+  size_t  j=0;
   
-  int *p=&array[0];
+  size_t *p=&array[0];
   
      
   if(*(p+i)=='\0'){
