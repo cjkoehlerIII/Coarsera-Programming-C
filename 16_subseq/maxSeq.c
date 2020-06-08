@@ -21,22 +21,24 @@ size_t maxSeq(int *array, size_t n){
     return max_seq;}
 
 
-  while(i<n){
+ for(i=1;i<n;i++){
 
-    if(array[i]==array[i-1]){
-      continue;}
+    //  if(array[i]==array[i-1]){
+    //continue;}
 
     if(array[i]>array[i-1]){
       current_seq++;
+    }else{
 
-    if(current_seq>max_seq){
+      if(current_seq>max_seq){
 	max_seq=current_seq;}
-    }
-    else{
-      max_seq=1;
-          }
-    
-    i++;
+ 
+    current_seq=1;
   }
-   return max_seq;
+}
+
+if(current_seq>max_seq){
+  max_seq=current_seq;}
+
+  return max_seq;
 }

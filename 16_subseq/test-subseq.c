@@ -53,5 +53,5 @@ if(maxSeq(array8,5)!=5){
    printf("Failed on big");
    exit(EXIT_FAILURE);}
    
-return(EXIT_SUCCESS);
+ return(EXIT_SUCCESS);
 }
