@@ -1,0 +1,10 @@
+Grading at Mon Jun  8 04:44:01 UTC 2020
+Attempting to compile maxSeq.c 
+maxSeq.c: In function ‘maxSeq’:
+maxSeq.c:42:13: error: operation on ‘current_seq’ may be undefined [-Werror=sequence-point]
+  current_seq=current_seq++;}
+             ^
+cc1: all warnings being treated as errors
+The code did not compile!
+
+Overall Grade: F
