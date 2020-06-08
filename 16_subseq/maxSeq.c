@@ -43,7 +43,6 @@ size_t maxSeq(int *array, size_t n){
 
    return super_seq;
   };
->>>>>>> 8df770ff209341cc33bd33370be2e7733e8ae0e9
   
 
     
