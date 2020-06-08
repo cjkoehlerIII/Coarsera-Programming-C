@@ -3,7 +3,7 @@
 
 size_t maxSeq(int *array, size_t n){
 
-  size_t current_seq=1;
+  size_t current_seq=0;
   size_t max_seq=0;
   size_t super_seq=0;
   int i=0;
@@ -20,41 +20,41 @@ size_t maxSeq(int *array, size_t n){
     super_seq=1;
      return super_seq=1;};
 
-  if(array[0]==0 && n==1){
+  if((array[0]==0||array[0]<0) && n==1){
     super_seq=1;
     return super_seq=1;};
 
   for(j=0;j<n;j++){
-    current_seq=1;
-    max_seq=0;
+    // current_seq=0;
+    //max_seq=0;
      
     for(i=j;i<n;i++){
 
       if(*(p+i)<0){
+	current_seq=0;
 	continue;}
 
       if(*(p+i+1)==*(p+i)){
-	continue;}
+	current_seq=1;
+	continue;};
 
       if(*(p+i+1)>*(p+i)){
-	current_seq=current_seq+1;};
+	current_seq=current_seq++;}
+      else{current_seq=1;};
 
       if(current_seq>max_seq){
 	max_seq=current_seq;};
 
       if(*(p+i+1)<*(p+i)){
-	break;};
-  
-      if(current_seq>max_seq){
-	max_seq=current_seq;};
-  
+	continue;};
+   
     }
     
     if(max_seq>super_seq){
       super_seq=max_seq;}
+    printf("super_seq = %zu",super_seq);
   }
-
-   return super_seq;
+  return super_seq;
 }
   
 
