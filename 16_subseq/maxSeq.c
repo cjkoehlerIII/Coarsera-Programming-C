@@ -26,7 +26,7 @@ size_t maxSeq(int *array, size_t n){
     if(array[i]==array[i-1]){
       continue;}
 
-    if(array[i]>array[i-1]&&array[i-1]>0){
+    if(array[i]>array[i-1]){
       current_seq++;
 
     if(current_seq>max_seq){
