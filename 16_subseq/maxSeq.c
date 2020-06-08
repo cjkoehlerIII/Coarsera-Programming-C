@@ -7,14 +7,12 @@ size_t maxSeq(int *array, size_t n){
   size_t max_seq=1;
   size_t i=1;
   
-  int *p;
-  p=array;
 
- if(*(p+0)==1 && n==1){
+ if(array[0]==1 && n==1){
   max_seq=1;
   return max_seq;}
        
- if(*(p+0)==0 && n==1){
+ if(array[0]==0 && n==1){
    max_seq=1;
    return max_seq;}
  
@@ -25,16 +23,18 @@ size_t maxSeq(int *array, size_t n){
 
   while(i<n){
 
-    if(*(p+i)>*(p+i-1)){
+    if(array[i]==array[i-1]){
+      continue;}
+
+    if(array[i]>array[i-1]&&array[i-1]>0){
       current_seq++;
 
     if(current_seq>max_seq){
 	max_seq=current_seq;}
-
+    }
     else{
       max_seq=1;
           }
-    }
     
     i++;
   }
