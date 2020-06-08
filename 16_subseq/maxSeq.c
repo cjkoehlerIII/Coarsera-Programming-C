@@ -3,10 +3,9 @@
 
 size_t maxSeq(int *array, size_t n){
 
-  size_t current_seq=0;
-  size_t max_seq=0;
-  size_t i=0;
-  size_t j=0;
+  size_t current_seq=1;
+  size_t max_seq=1;
+  size_t i=1;
   
   int *p;
   p=array;
@@ -15,28 +14,29 @@ size_t maxSeq(int *array, size_t n){
   max_seq=1;
   return max_seq;}
        
-
- if(*(n<1)||array==NULL){
-    max_seq=1;
+ if(*(p+0)==0 && n==1){
+   max_seq=1;
+   return max_seq;}
+ 
+ if(n<1||array==NULL){
+    max_seq=0;
     return max_seq;}
 
- if(n
 
-  for(i=0;i<n;i++){
+  while(i<n){
 
-    for(j=0;*(p+i+1)>*(p+i)&&*(p+i)>=0 && i<n; j++){
-      current_seq=j+2;
-      i++;
+    if(*(p+i)>*(p+i-1)){
+      current_seq++;
 
+    if(current_seq>max_seq){
+	max_seq=current_seq;}
+
+    else{
+      max_seq=1;
+          }
     }
-
-    if(current_seq>max_seq)
-      {max_seq=current_seq;}
-
-    if(max_seq==0){
-      max_seq=1;}
-        
+    
+    i++;
   }
-
    return max_seq;
 }
