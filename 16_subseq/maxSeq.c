@@ -5,7 +5,6 @@ size_t maxSeq(int *array, size_t n){
 
   size_t current_seq=0;
   size_t max_seq=0;
-  size_t super_seq=0;
   int i=0;
   int j=0;
   
@@ -13,21 +12,21 @@ size_t maxSeq(int *array, size_t n){
   p=array;
 
  if(n<1){
-    super_seq=0;
-    return super_seq=0;
+    max_seq=0;
+    return max_seq=0;
   }
   
   if(array[0]==1 && n==1){
-  super_seq=1;
-  return super_seq;}
+  max_seq=1;
+  return max_seq;}
        
   if(array[0]=='\0'){
-  super_seq=1;
-  return super_seq;}
+  max_seq=1;
+  return max_seq;}
 
   if(array[0]==0&&n==1){
-    super_seq=1;
-    return super_seq;}
+    max_seq=1;
+    return max_seq;}
  
   for(i=0;i<n;i++){
 
@@ -39,11 +38,8 @@ size_t maxSeq(int *array, size_t n){
     if(current_seq>max_seq)
       {max_seq=current_seq;}
  
-    
-    if(max_seq>super_seq){
-	super_seq=max_seq;};
-      
+        
   }
 
-   return super_seq;
+   return max_seq;
 }
