@@ -42,4 +42,4 @@ size_t maxSeq(int *array, size_t n){
   }
 
    return super_seq;
-};
+}
