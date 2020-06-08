@@ -18,13 +18,16 @@ size_t maxSeq(int *array, size_t n){
   }
   
   if(array[0]==1 && n==1){
-    super_seq=1;
-    return super_seq;}
+  super_seq=1;
+  return super_seq;}
        
   if(array[0]=='\0'){
+  super_seq=1;
+  return super_seq;}
+
+  if(array[0]==0&&n==1){
     super_seq=1;
     return super_seq;}
-
  
   for(i=0;i<n;i++){
 
