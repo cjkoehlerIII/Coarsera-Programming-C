@@ -1,8 +1,8 @@
-Grading at Mon Jun  8 04:51:52 UTC 2020
+Grading at Mon Jun  8 05:02:34 UTC 2020
 Attempting to compile maxSeq.c 
-maxSeq.c:45:4: error: ISO C does not allow extra ‘;’ outside of a function [-Werror=pedantic]
-   };
-    ^
+maxSeq.c:45:2: error: ISO C does not allow extra ‘;’ outside of a function [-Werror=pedantic]
+ };
+  ^
 cc1: all warnings being treated as errors
 The code did not compile!
 
