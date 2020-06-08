@@ -1,14 +1,8 @@
-Grading at Mon Jun  8 04:51:11 UTC 2020
+Grading at Mon Jun  8 04:51:52 UTC 2020
 Attempting to compile maxSeq.c 
 maxSeq.c:45:4: error: ISO C does not allow extra ‘;’ outside of a function [-Werror=pedantic]
    };
     ^
-maxSeq.c:46:1: error: expected identifier or ‘(’ before ‘>>’ token
- >>>>>>> 8df770ff209341cc33bd33370be2e7733e8ae0e9
- ^
-maxSeq.c:46:9: error: invalid suffix "df770ff209341cc33bd33370be2e7733e8ae0e9" on integer constant
- >>>>>>> 8df770ff209341cc33bd33370be2e7733e8ae0e9
-         ^
 cc1: all warnings being treated as errors
 The code did not compile!
 
