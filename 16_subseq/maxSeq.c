@@ -6,56 +6,44 @@ size_t maxSeq(int *array, size_t n){
   size_t current_seq=0;
   size_t max_seq=0;
   size_t super_seq=0;
-  int i=0;
-  int j=0;
+  size_t i=0;
   
-  int *p=&array[0];
   
-     
-  if(*(p+i)=='\0'){
+  int *p=array;
+
+ if(n<1){
     super_seq=0;
-     return super_seq=0;};
-
-  if(array[0]==1|| n==1){
+    return super_seq=0;
+  }
+  
+  if(array[0]==1 && n==1){
     super_seq=1;
-     return super_seq=1;};
-
-  if((array[0]==0||array[0]<0) && n==1){
+    return super_seq;}
+       
+  if(array[0]=='\0'){
     super_seq=1;
-    return super_seq=1;};
+    return super_seq;}
 
-  for(j=0;j<n;j++){
-    // current_seq=0;
-    //max_seq=0;
-     
-    for(i=j;i<n;i++){
+ 
+  for(i=0;i<n;i++){
 
-      if(*(p+i)<0){
-	current_seq=0;
-	continue;}
-
-      if(*(p+i+1)==*(p+i)){
-	current_seq=1;
-	continue;};
-
-      if(*(p+i+1)>*(p+i)){
-	current_seq=current_seq++;}
-      else{current_seq=1;};
-
-      if(current_seq>max_seq){
-	max_seq=current_seq;};
-
-      if(*(p+i+1)<*(p+i)){
-	continue;};
-   
+    for(size_t j =0;*(p+i+1)>*(p+i)&&*(p+i)>=0 && i<n; j++){
+      current_seq=j+2;
+      i++;
     }
+
+    if(current_seq>max_seq)
+      {max_seq=current_seq;}
+ 
     
     if(max_seq>super_seq){
-      super_seq=max_seq;}
-    printf("super_seq = %zu",super_seq);
-  }
-  return super_seq;
-}
+	super_seq=max_seq;};
+      
+  };
+
+   return super_seq;
+  };
+>>>>>>> 8df770ff209341cc33bd33370be2e7733e8ae0e9
   
 
     
