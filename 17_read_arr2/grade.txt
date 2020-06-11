@@ -1,4 +1,4 @@
-Grading at Thu Jun 11 20:03:02 UTC 2020
+Grading at Thu Jun 11 20:04:52 UTC 2020
 Attempting to compile test.c
 gcc -o test test.c
 compiled
