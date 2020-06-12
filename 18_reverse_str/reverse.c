@@ -7,21 +7,25 @@ void reverse(char * str) {
   char *p;
 
   p=str;
+
+  if(str==NULL){
+    return;};
   
   size_t len=strlen(p);
   char temp[len];
   int i=0;
   
-  if(str==NULL){
-    return;};
-  
+   
   if(len==0){
+    return;};
+
+  if(len==1){
     return;};
 
   if(*str=='\0'){
     return;};
 
-      
+  
   while(i<len){
     
     temp[i]=*(p+len-1-i);
