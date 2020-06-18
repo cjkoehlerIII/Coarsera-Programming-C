@@ -18,7 +18,9 @@ void printDigits(int x) {
     }
     printf("%d",b);
   }
-}
+    }
+
+
 
 
 int main(void) {
