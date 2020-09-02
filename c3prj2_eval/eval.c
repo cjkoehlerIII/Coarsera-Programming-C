@@ -24,8 +24,8 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 }
 
 suit_t flush_suit(deck_t * hand) {
-  int size =(int)hand->n_cards;
-  card_t **card_p =hand->cards;
+  int size =(int)(*hand).n_cards;
+  card_t **card_p =(*hand).cards;
   int count_array[]={0,0,0,0,0};
 
   for (int i=0; i< size; i++){
@@ -53,9 +53,9 @@ suit_t flush_suit(deck_t * hand) {
     return max_val;
 }
 
-size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
+size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_a_kind){
   for (size_t i=0; i<(int)n; i++){
-    if(*match_counts==n_of_akind){
+    if(*match_counts==n_of_a_kind){
       return i;
     }
     match_counts++;
@@ -342,9 +342,9 @@ hand_eval_t evaluate_hand(deck_t * hand) {
     }
   }
   unsigned * match_counts = get_match_counts(hand);
-  unsigned n_of_a_kind = get_largest_element(match_counts, hand->n_cards);
+  unsigned n_of_a_kind = get_largest_element(match_counts, (*hand).n_cards);
   assert(n_of_a_kind <= 4);
-  size_t match_idx = get_match_index(match_counts, hand->n_cards, n_of_a_kind);
+  size_t match_idx = get_match_index(match_counts, (*hand).n_cards, n_of_a_kind);
   ssize_t other_pair_idx = find_secondary_pair(hand, match_counts, match_idx);
   free(match_counts);
   if (n_of_a_kind == 4) { //4 of a kind
@@ -359,7 +359,7 @@ hand_eval_t evaluate_hand(deck_t * hand) {
   else if(fs != NUM_SUITS) { //flush
     ans.ranking = FLUSH;
     size_t copy_idx = 0;
-    for(size_t i = 0; i < hand->n_cards;i++) {
+    for(size_t i = 0; i < (*hand).n_cards;i++) {
       if (hand->cards[i]->suit == fs){
 	ans.cards[copy_idx] = hand->cards[i];
 	copy_idx++;
