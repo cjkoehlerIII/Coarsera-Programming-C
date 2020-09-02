@@ -24,7 +24,7 @@ int deck_contains(deck_t * d, card_t c) {
  
   card_t **ptr = d->cards; 
 
-  for(int i=0; i<(d->n_cards); i++){
+  for(int i=0; i<((int)d->n_cards); i++){
     if(value_letter(**ptr)== value_letter(c) && suit_letter(**ptr)==suit_letter(c)){
       return 1;
     }
