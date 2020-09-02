@@ -68,9 +68,9 @@ ssize_t  find_secondary_pair(deck_t * hand,
 			     size_t match_idx) {
   size_t first = -1;
   size_t second = -1;
-
-  size_t size =(*hand).n_cards;
+  size_t size = hand->n_cards;
   unsigned match_val = *(match_counts+match_idx);
+
   if(match_idx >0){
     if(get_match_index(match_counts, match_idx,2)<=get_match_index(match_counts, match_idx,3)){
       first=get_match_index(match_counts, match_idx,2);
@@ -81,17 +81,17 @@ ssize_t  find_secondary_pair(deck_t * hand,
 }
 
   if(match_idx+(size_t)match_val<size){
-    if(get_match_index((match_counts+(unsigned)match_idx+match_val+match_val),size-match_idx-match_val,2)<=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,3)){
+    if(get_match_index((match_counts + (unsigned)match_idx+match_val + match_val),size-match_idx-match_val,2)<=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,3)){
       second=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,2);
     }
     else{
        second=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,3);
     }
+  }
 
     if(second!=-1){
       second=second+match_idx+(size_t)match_val;
     }
-  }
 
     if(first!=-1){
       return first;
