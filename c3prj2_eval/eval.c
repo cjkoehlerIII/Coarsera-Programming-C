@@ -26,9 +26,9 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 suit_t flush_suit(deck_t * hand) {
   int size =(int)(*hand).n_cards;
   card_t **card_p =(*hand).cards;
-  int count_array[]={0,0,0,0,0};
+  int count_array[]={0,0,0,0,0,0,0};
 
-  for (int i=0; i< size; i++){
+  for (int i=0; i< size-1; i++){
     card_t card = **card_p;
     (*(count_array + card.suit))++;
     card_p++;
@@ -44,7 +44,7 @@ suit_t flush_suit(deck_t * hand) {
 
   unsigned get_largest_element(unsigned * arr, size_t n) {
   unsigned max_val = 0;
-  for (int i=0; i<(int)n; i++){
+  for (int i=0; i<(int)n-1; i++){
     if (*arr > max_val){
       max_val= *arr;
     }
@@ -54,50 +54,28 @@ suit_t flush_suit(deck_t * hand) {
 }
 
 size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_a_kind){
-  for (size_t i=0; i<(int)n; i++){
-    if(*match_counts==n_of_a_kind){
-      return i;
-    }
-    match_counts++;
+
+  for (size_t i=0; i<n; i++){
+    if(match_counts[i]==n_of_a_kind) return i;
   }
-  return -1;
+  return 0;
 }
 
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
 			     size_t match_idx) {
-  size_t first = -1;
-  size_t second = -1;
-  size_t size = hand->n_cards;
-  unsigned match_val = *(match_counts)+match_idx;
+  card_t **card = (*hand).cards;
+  card_t card1,card2;
+  card2 = **(card+match_idx);
+  card1 = **(card+0);
+  for (size_t i=0; i< ((*hand).n_cards);i++){
+    card1=**(card+i);
+    if ((match_counts[i] > 1)&&(card1.value != card2.value)) return i;
+  }
 
-  if(match_idx >0){
-    if(get_match_index(match_counts, match_idx,2)<=get_match_index(match_counts, match_idx,3)){
-      first=get_match_index(match_counts, match_idx,2);
-    }
-    else{
-      first = get_match_index(match_counts,match_idx,3);
-    }
+  return -1;
+
 }
-
-  if(match_idx+(size_t)match_val<size){
-    if(get_match_index((match_counts + (unsigned)match_idx+match_val + match_val),size-match_idx-match_val,2)<=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,3)){
-      second=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,2);
-    }
-    else{
-       second=get_match_index((match_counts+(unsigned)match_idx+match_val),size-match_idx-match_val,3);
-    }
-  }
-
-    if(second!=-1){
-      second=second+match_idx+(size_t)match_val;
-    }
-
-    if(first!=-1){
-      return first;
-    }
-    return second;
-  }
 
 
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
