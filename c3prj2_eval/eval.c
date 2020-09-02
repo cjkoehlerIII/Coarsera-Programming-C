@@ -69,7 +69,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   size_t first = -1;
   size_t second = -1;
   size_t size = hand->n_cards;
-  unsigned match_val = *(match_counts+match_idx);
+  unsigned match_val = *(match_counts)+match_idx;
 
   if(match_idx >0){
     if(get_match_index(match_counts, match_idx,2)<=get_match_index(match_counts, match_idx,3)){
