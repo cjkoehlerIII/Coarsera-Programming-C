@@ -24,17 +24,17 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 }
 
 suit_t flush_suit(deck_t * hand) {
-  int size =(int)(*hand).n_cards;
-  card_t **card_p = (*hand).cards;
-  int count_suit[]={0,0,0,0,0,0,0};
+  int size =(int)hand->n_cards;
+  card_t **card_p =hand->cards;
+  int count_array[]={0,0,0,0,0};
 
   for (int i=0; i< size; i++){
     card_t card = **card_p;
-    (*(count_suit + card.suit))++;
+    (*(count_array + card.suit))++;
     card_p++;
   }
   for(int j=0;j<4;j++){
-    if ((*count_suit+j)>4){
+    if (*(count_array+j)>4){
     return j;
     }
   }
