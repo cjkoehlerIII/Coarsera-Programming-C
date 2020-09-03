@@ -10,7 +10,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
   if ((**cp1).value > (**cp2).value) return -1;
   else if ((**cp1).value < (**cp2).value) return 1;
   else if ((**cp1).suit < (**cp2).suit) return -1;
-  else if ((*cp1).suit > (**cp2).suit) return 1;
+  else if ((**cp1).suit > (**cp2).suit) return 1;
   else return 0;
 }
 
