@@ -5,10 +5,10 @@
 #define VALUE_QUEEN 12
 #define VALUE_JACK 11
 typedef enum {
-  SPADES,
-  HEARTS,
-  DIAMONDS,
   CLUBS,
+  DIAMONDS,
+  HEARTS,
+  SPADES,
   NUM_SUITS
 } suit_t;
 

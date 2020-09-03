@@ -6,8 +6,8 @@
 void assert_card_valid(card_t c){
 assert(c.value>=2);
 assert(c.value<=VALUE_ACE);
-assert(c.suit>=SPADES);
-assert(c.suit<=CLUBS);
+assert(c.suit>=CLUBS);
+assert(c.suit<=SPADES);
 return;
   }
 
@@ -96,14 +96,14 @@ char value_letter(card_t c) {
 }
 
 char suit_letter(card_t c) {
-  if(c.suit==SPADES){
-    return 's';};
-  if(c.suit==HEARTS){
-    return 'h';};
+  if(c.suit==CLUBS){
+    return 'c';};
   if(c.suit==DIAMONDS){
     return 'd';};
-  if(c.suit==CLUBS){
-    return 'c';}
+  if(c.suit==HEARTS){
+    return 'h';};
+  if(c.suit==SPADES){
+    return 's';}
   else{
     return '?';};
 
@@ -155,22 +155,22 @@ card_t card_from_num(unsigned c) {
   card_t temp={0,0};
 
   if(c<=12){
-    temp.suit=SPADES;
+    temp.suit=CLUBS;
     temp.value=c%13+2;
     return temp;};
 
   if(c<=25&&c>12){
-    temp.suit=HEARTS;
-    temp.value=c%13+2;
-    return temp;};
-
-  if(c<=38&&c>25){
     temp.suit=DIAMONDS;
     temp.value=c%13+2;
     return temp;};
 
+  if(c<=38&&c>25){
+    temp.suit=HEARTS;
+    temp.value=c%13+2;
+    return temp;};
+
   if(c<=51&&c>38){
-    temp.suit=CLUBS;
+    temp.suit=SPADES;
     temp.value=c%13+2;
     return temp;};
  
