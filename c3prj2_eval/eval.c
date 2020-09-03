@@ -66,7 +66,7 @@ ssize_t  find_secondary_pair(deck_t * hand,
   card_t card1,card2;
   card2 = **(card+match_idx);
   card1 = **(card+0);
-  for (size_t i=0; i< ((*hand).n_cards);i++){
+  for (size_t i=0; i< (hand->n_cards);i++){
     card1=**(card+i);
     if ((match_counts[i] > 1)&&(card1.value != card2.value)) return i;
   }
@@ -77,8 +77,8 @@ ssize_t  find_secondary_pair(deck_t * hand,
 
 
 int is_n_length_straight_at(deck_t * hand, size_t index, suit_t fs, int n) {
-  card_t ** cards_ptr = (*hand).cards;
-  size_t size = (*hand).n_cards;
+  card_t ** cards_ptr = hand->cards;
+  size_t size = hand->n_cards;
     
     if (fs != NUM_SUITS && (**(cards_ptr + index)).suit != fs) {
         return EXIT_FAILURE;
@@ -164,8 +164,8 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 				  size_t idx) {
 
   hand_eval_t ans;
-      ans.ranking = what;
-      card_t ** dk_card_ptr = (*hand).cards;
+    ans.ranking = what;
+    card_t ** dk_card_ptr = hand->cards;
     card_t cur_card = **dk_card_ptr;
     unsigned n_k_val = (**(dk_card_ptr + idx)).value;
     unsigned delta_ptr = 0;
