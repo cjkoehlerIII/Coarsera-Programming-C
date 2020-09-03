@@ -7,7 +7,6 @@ int* aFunction(int x, int *p, int ** q) {
   printf("**q= %d\n", **q);
   *p = 42;
   **q = 99;
-  *q = &p[1];
   return &p[2];
 }
 
