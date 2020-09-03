@@ -201,8 +201,8 @@ hand_eval_t build_hand_from_match(deck_t * hand,
     
 
 int compare_hands(deck_t * hand1, deck_t * hand2) {
-  qsort((*hand1).cards, (*hand1).n_cards, sizeof((*hand1).cards[0]), card_ptr_comp);
-  qsort((*hand2).cards, (*hand2).n_cards, sizeof((*hand2).cards[0]), card_ptr_comp);
+  qsort((*hand1).cards, (*hand1).n_cards, sizeof(card_t), card_ptr_comp);
+  qsort((*hand2).cards, (*hand2).n_cards, sizeof(card_t), card_ptr_comp);
 
     hand_eval_t hand1_val = evaluate_hand(hand1); 
     hand_eval_t hand2_val = evaluate_hand(hand2);
@@ -221,7 +221,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
     else {
         unsigned cpr_val1 = (**hand1_ptr).value;
         unsigned cpr_val2 = (**hand2_ptr).value;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 5; i++){
             cpr_val1 = (**(hand1_ptr + i)).value;
             cpr_val2 = (**(hand2_ptr + i)).value;
             if (cpr_val1 > cpr_val2) {
