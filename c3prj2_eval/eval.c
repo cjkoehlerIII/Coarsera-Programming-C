@@ -28,7 +28,7 @@ suit_t flush_suit(deck_t * hand) {
   card_t **card_p =(*hand).cards;
   int count_array[]={0,0,0,0,0,0,0};
 
-  for (int i=0; i< size-1; i++){
+  for (int i=0; i< size; i++){
     card_t card = **card_p;
     (*(count_array + card.suit))++;
     card_p++;
