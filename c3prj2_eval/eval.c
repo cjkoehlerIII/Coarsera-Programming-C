@@ -26,7 +26,7 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 suit_t flush_suit(deck_t * hand) {
   int size =(int)(*hand).n_cards;
   card_t **card_p =(*hand).cards;
-  int count_array[]={0,0,0,0,0,0,0};
+  int count_array[]={0,0,0,0,0};
 
   for (int i=0; i< size; i++){
     card_t card = **card_p;
@@ -44,7 +44,7 @@ suit_t flush_suit(deck_t * hand) {
 
   unsigned get_largest_element(unsigned * arr, size_t n) {
   unsigned max_val = 0;
-  for (int i=0; i<(int)n-1; i++){
+  for (int i=0; i<(int)n; i++){
     if (*arr > max_val){
       max_val= *arr;
     }
