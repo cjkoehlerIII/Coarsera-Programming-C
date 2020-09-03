@@ -13,7 +13,7 @@ Ah Ac Ad As 2c 3c 4c; Ah Ac Ad As 3d 4d 4c
 Kd 4c 5c 6c 7c Kc Kh; Kd 4c 5c 6d 7d 4d Kh
 3s 9s 0s As Ks Qs 3h; 3s 9s 0s As 3d 3c 3h
 3s 2s 5d 4s 7s 6s 5s; 3s 2s 5d 4s 9d 0d 5s
-
+Ah Ac 3c 4d 7s 6s 9h; 3d 2h 0d 0s 5c 6s 9h
 
 
 
