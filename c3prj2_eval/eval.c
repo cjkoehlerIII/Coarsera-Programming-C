@@ -201,26 +201,17 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
     card_t ** hand1_ptr = hand1_val.cards;
     card_t ** hand2_ptr = hand2_val.cards;
     
-    if (hand1_val.ranking != hand2_val.ranking) {
-        if (hand1_val.ranking < hand2_val.ranking) {
-            return 1;
-        }
-        else {
-            return -1;
-        }
-    }
+    if (hand1_val.ranking < hand2_val.ranking) return 1;
+    else if (hand1_val.ranking > hand2_val.ranking) return -1;
     else {
         unsigned cpr_val1 = (**hand1_ptr).value;
         unsigned cpr_val2 = (**hand2_ptr).value;
         for (int i = 0; i < 5; i++){
             cpr_val1 = (**(hand1_ptr + i)).value;
             cpr_val2 = (**(hand2_ptr + i)).value;
-            if (cpr_val1 > cpr_val2) {
-                return 1;
-            }
-            else if (cpr_val1 < cpr_val2) {
-                return -1;
-            }
+            if (cpr_val1 > cpr_val2) return 1;
+            else if (cpr_val1 < cpr_val2) return -1;
+	    else continue;
         }
     }
     return 0;
